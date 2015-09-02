@@ -1,0 +1,50 @@
+#The number 1 ten times in an array
+
+array1=[1]
+10.times do 
+puts 1 
+end
+
+#The numbers 1-10 in an array.
+
+array10=[*(1..10)]
+print array10
+
+#Do you just want an new array with 1-100 in it or do you want 11-100 added to the above array? We will do it both ways 
+#just in case.
+
+array10.push(*11..100)
+print array10
+#Adding the numbers 11 - 100 to the above array
+
+array100=[*(1..100)]
+print array100
+
+#replace the number 3 in the array with greene
+
+array10.each_index do |pos|
+  array10[pos]="Greene County" if array10[pos]%3==0 && array10[pos]%5==0
+end
+
+print array10
+
+array10.each_index do |pos|
+array10[pos] = "greene" if array10[pos] == 3
+end
+print array10
+
+array10.each_index do |pos|
+array10[pos] = "greene" if array10[pos]%3==0
+end
+print array10
+
+array10.each_index do |pos|
+  array10[pos]= "County" if array10[pos]%5==0
+end
+print array10
+
+puts "What index position in the array do you wish to see Pick from 0-99 "
+choice=gets.to_i
+puts "the spot you chose at #{choice} is #{array10.at(choice)}"
+
+puts "thanks for viewing my work and have a wonderful day"
