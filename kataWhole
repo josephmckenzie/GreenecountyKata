@@ -1,0 +1,29 @@
+num1=[1]
+10.times do 
+  puts num1
+end
+
+num= [*(1..10)] Prints a an array from 1-10
+
+print num.push(*11..100) adds the numbers 11-100 to the array
+
+
+ num.each_index do |i|
+  num[i] = "green" if num[i] == 3 changes 3 to greene
+end
+
+num.each_index do|i| 
+num[i]= "Greene County" if num[i]%3==0&&num[i]%5==0 changes any multiple of bot 3 & 5 to greene county
+end
+
+num.each_index do |i|
+  num[i] = "greene" if num[i]%3==0 changes any multiple of 3 to greene  
+  
+  num.each_index do|i| 
+  num[i]="county" if num[i]%5==0 changes any multiple of 5 to county
+end
+end
+puts "What index postion do you want to see?"
+choice = gets.chomp.to_i #chomp is not nessecary when using to_i
+puts "The value at index #{choice}, is #{num.fetch(choice)}" 
+  
